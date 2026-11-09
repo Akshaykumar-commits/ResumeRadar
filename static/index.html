@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ResumeRadar: check your resume against any job</title>
+<meta name="description" content="Free resume checker. Match your resume to a job description and get ATS tips instantly.">
+<link rel="stylesheet" href="resume-radar.css">
+</head>
+<body>
+<main>
+<div class="hero"><h1>📡 ResumeRadar</h1>
+<p class="sub">See how well your resume matches a job in seconds, and get a clear list of fixes.</p>
+<div class="pills"><span>⚡ Instant</span><span>🔒 Not stored</span><span>🆓 Free</span><span>🎯 ATS checks</span><span>🧑‍💻 7 role presets</span><span>📈 Progress history</span></div></div>
+
+<section><h2 class="sec">How it works</h2>
+<p class="sec-sub">New here? It takes under a minute and needs no sign-up.</p>
+<div class="cards3">
+<div class="st"><div class="bd">1</div><h3>Add your resume</h3><p>Upload a PDF or TXT file, or paste your resume text.</p></div>
+<div class="st"><div class="bd">2</div><h3>Paste the job description</h3><p>Copy the text from the job post, or pick a ready-made role if you don’t have one.</p></div>
+<div class="st"><div class="bd">3</div><h3>Get your report</h3><p>See your match score, missing keywords and clear fixes in seconds.</p></div>
+</div></section>
+<div class="grid">
+<div class="card"><h2><span class="n">1</span>Your resume</h2>
+<div id="drop" tabindex="0"><div><div class="ic">📤</div><b>Drop your resume here</b><br><span class="note">PDF or TXT · or tap to browse</span></div></div>
+<input id="file" type="file" accept=".pdf,.txt" hidden>
+<p class="note" id="fname"></p>
+<textarea id="rtxt" placeholder="…or paste your resume text here" style="height:90px"></textarea></div>
+<div class="card"><h2><span class="n">2</span>Job description</h2>
+<div class="row" style="margin-bottom:10px"><select id="role" aria-label="Pick a role"></select><button class="g" id="ex" type="button">✨ Try an example</button></div>
+<textarea id="jd" style="height:260px" placeholder="Paste the job description here"></textarea></div>
+</div>
+<div class="row"><button id="go">🔍 Analyze resume</button><span id="err" style="color:var(--bad)"></span></div>
+
+<div id="out" hidden style="margin-top:20px">
+<div class="card row" style="gap:20px"><div class="ring" id="ring"><div id="score"></div></div>
+<div style="flex:1;min-width:220px"><h2 id="verdict"></h2><div id="bars"></div></div></div>
+<div class="grid">
+<div class="card"><h2>✅ Matched keywords</h2><div class="chips" id="m"></div></div>
+<div class="card"><h2>❌ Missing keywords</h2><div class="chips" id="x"></div></div>
+</div>
+<div class="card"><h2>🧪 ATS &amp; quality checks</h2><ul id="chk"></ul></div>
+<div class="card"><h2>💡 Suggestions</h2><ul id="sug"></ul>
+<p><button class="g" id="cp">Copy report</button> <button class="g" id="pr">🖨️ Save as PDF</button></p></div>
+</div>
+<div class="card" id="hist" hidden><h2>🕘 Your recent checks</h2><div id="hl"></div><p><button class="g" id="hc">Clear history</button></p><p class="note">Saved only on this device.</p></div>
+<section><h2 class="sec">Why it’s useful</h2>
+<p class="sec-sub">Many companies use software to filter resumes before a person reads them. ResumeRadar shows you what that software is likely to look for.</p>
+<div class="cards3">
+<div class="st"><div class="bd em">🎯</div><h3>Match the job</h3><p>See which skills from the job post are already on your resume and which are missing.</p></div>
+<div class="st"><div class="bd em">🧾</div><h3>Pass the first filter</h3><p>Checks contact details, links, length, sections and action verbs that recruiters expect.</p></div>
+<div class="st"><div class="bd em">🛠️</div><h3>Know what to fix</h3><p>Get a simple to-do list instead of guessing why you’re not getting replies.</p></div>
+<div class="st"><div class="bd em">🔒</div><h3>Free and private</h3><p>No account needed. Your resume is only used to score it and is never saved or shared.</p></div>
+</div></section>
+<section class="faq"><h2 class="sec">Common questions</h2>
+<details><summary>What is an ATS?</summary><p>An Applicant Tracking System is software companies use to sort resumes by keywords and format before a recruiter reads them.</p></details>
+<details><summary>How is the score calculated?</summary><p>60% keyword match with the job description, 15% for having the standard resume sections, and 25% for quality checks like contact info, links, length and measurable results. 70% or more is a strong match, 45–69% is decent, and below 45% needs work.</p></details>
+<details><summary>Should I add every missing keyword?</summary><p>No. Only add skills you truly have, in the right place such as your skills section or project bullets. Never list skills you can’t back up in an interview.</p></details>
+<details><summary>Why can’t it read my PDF?</summary><p>Scanned or image-only PDFs have no readable text. Export your resume as a PDF from Word or Google Docs, or paste the text instead.</p></details>
+<details><summary>Does a high score guarantee an interview?</summary><p>No. It’s a guide to improve your resume for a specific job, not a hiring decision.</p></details>
+</section>
+<p class="note">Scores are a keyword-based estimate to guide edits, not a hiring decision. Scanned or image-only PDFs can’t be read; export from Word or Google Docs instead.</p>
+</main>
+<script src="resume-radar.js"></script>
+</body>
+</html>
